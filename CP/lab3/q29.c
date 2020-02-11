@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <math.h>
 #include <string.h>
-
 int binary_convert(unsigned int n) {
     int dec = 0, i = 0, rem;
     while (n != 0) {
@@ -13,8 +12,9 @@ int binary_convert(unsigned int n) {
     return dec;
 }
 
-void hex_convert(int hex[],int l) {
-    int val,decimal;
+void  hex_convert(char hex[],int l) {
+    int val = 0;
+    long int decimal= 0;
     for(int i=0; hex[i]!='\0'; i++)
     {
  
@@ -29,16 +29,18 @@ void hex_convert(int hex[],int l) {
         }
         else if(hex[i]>='A' && hex[i]<='F')
         {
-            val = hex[i] - 65 + 10;
+            val = hex[i] - 65 +10;
         }
- decimal += val * pow(16, l);
+    decimal += val * pow(16, l);
         l--;
+        printf("%ld",decimal);
     }
 
     printf("Hexadecimal number = %s\n", hex);
-    printf("Decimal number = %lld", decimal);
+    printf("Decimal number = %ld", decimal);
 
-    return 0;
+
+
 }
 
 int octal_convert(unsigned int n) {
@@ -55,7 +57,7 @@ int octal_convert(unsigned int n) {
 int main(){
 
     unsigned int value, decimal;
-    char hex[17];
+    char hex[20];
     int l;
     int choice;
     
@@ -70,10 +72,13 @@ int main(){
                 printf("decimal value is:%d",decimal);
                 
             break;
-        case 2:printf("enter the value");
-                gets(hex);
+        case 2: 
+            printf("enter the value");
+              scanf("%s",hex);
+                
                 l = strlen(hex);
-                printf("the decimal value is: %d",hex_convert(hex,l));
+                hex_convert(hex,l);
+                
             break;
         case 3:printf("enter the value");
                 scanf("%o",&value);
