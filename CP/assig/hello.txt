@@ -1,0 +1,8 @@
+/*print hello 
+28-3-20 */
+#include<stdio.h>
+int main(void)
+{   
+    printf(" hello world\n");// error was ' ' used instead of " "
+    return 0;
+}    
