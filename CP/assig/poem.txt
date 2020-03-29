@@ -1,0 +1,30 @@
+/*
+ printing a poem 
+28-3-20 
+
+    Nothing Gold Can Stay
+
+Nature's first green is gold,
+Her hardest hue to hold.
+Her early leaf's a flower;
+But only so an hour.
+Then leaf subsides to leaf.
+So Eden sank to grief,
+So dawn goes down to day.
+Nothing gold can stay. */
+
+#include <stdio.h>
+
+int main(void){
+    printf("\tNothing Gold Can Stay\n\n");
+    printf("Nature's first green is gold,\n");
+    printf("Her hardest hue to hold.\n");
+    printf("Her early leaf's a flower;\n");
+    printf("But only so an hour.");
+    printf("Then leaf subsides to leaf.\n");
+    printf("So Eden sank to grief,\n");
+    printf("So dawn goes down to day.\n");
+    printf("Nothing gold can stay.\n");
+return 0;
+
+}
