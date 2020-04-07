@@ -4,36 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog</title>
-    <link rel="stylesheet"type="text/css" href="style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    
-    <style>
-    #navs{
-      background-color: rgb(23,155,188);
-  }
-  body{
-    background-image:url("./assets/picture/bg.png") ;
-  }
-  .nav-item{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    color: chocolate;
-  }
-  .jumbotron-fluid{
-    border-style: groove;
-    border: black;
-    background-color:seashell;
-  }
-  .lead,.my-4{
-    font-size: medium;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black;
-    font-weight: bold;
-  }
-</style>
-  
+    <link rel="stylesheet"type="text/css" href="style.css"> 
 </head>
 <body>
-
+  <header>
+    <!--Nav bar-->
+  
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <a class="navbar-brand" href="#">ANK</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +18,8 @@
     </button>
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav ml-auto"> <!--navbar to left-->
+
         <li class="nav-item active">
           <a class="nav-link" href="#">Home </a>
         </li>
@@ -63,7 +41,24 @@
      
     </div>
   </nav>
-    <!--Nav bar-->
+  <div class="content">
+    <img src="./assets/picture/showcase.jpg" class="logo" alt="ANK">
+    <div class="title">
+      Welcome To ANK Blog
+    </div>
+    <div class="text">
+      this is my daily  life 
+    </div>
+  </div>
+</header>
+
+<!--service-->
+<section class="service">
+  <div class="container grid-3">
+    <i class="fab fa-github"></i>
+
+  </div>
+</section>
     
     
     <!--footer-->
