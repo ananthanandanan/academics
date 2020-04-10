@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+ /*int main() {
 	float sec, h, m, s;
 	printf("Input seconds: ");
 	scanf("%.2f", &sec);
@@ -14,4 +14,20 @@ int main() {
 	printf(" %.2f : %.2f : %.2f \n",h,m,s);
 	
 	return 0;
+}*/
+
+int mystery(int p, int q){
+     int r;
+     if ((r = p % q) == 0)
+          return q; 
+     else return mystery(q, r);
 }
+
+int main() {
+	 int i = 0, j = 1, k = 2;
+
+	 int res = mystery(7,91);
+	 printf("%d",res);
+	return 0;
+}
+
