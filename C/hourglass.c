@@ -48,7 +48,5 @@ int main() {
   }
 
   hour_glass(arr);
-
-
-    return 0;
+return 0;
 }
