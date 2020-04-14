@@ -14,13 +14,20 @@
     <!--Nav bar-->
   
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
     <a class="navbar-brand" href="#">ANK</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto"> <!--navbar to left-->
+      <ul class="navbar-nav"> <!--navbar to left-->
 
         <li class="nav-item active">
           <a class="nav-link" href="#">Home </a>
@@ -43,7 +50,19 @@
      
     </div>
   </nav>
-  <div class="spacing" style="height: 50px;"></div>
+ <!--slide-menu-->
+ <div id="side-menu" class="side-nav">
+   <div class="slide-height" style="height: 30px;"></div>
+  <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+  <a href="#">Home</a>
+  <a href="#">BlogPost</a>
+  <a href="#">Project</a>
+  <a href="#">Portfolio</a>
+  <a href="#">Contact</a>
+ </div>
+<div id="main">
+  <div class="spacing" style="height: 40px;"></div>
+  
   <div class="showcase">
   <div class="content">
     <img src="./assets/picture/logo.png" class="logo" alt="ANK">
@@ -85,18 +104,20 @@
         <h3>About this Website</h3>
       </div>
     </div>
-  </div>
+  
 
 </section>
 <!--footer-->
 <footer class="center bg-dark">
   <p>Ananthan2k &copy; 2020</p>
 </footer>
+</div>
+
     
     
     <!--footer-->
     <!--JS, jquery,pooper.js-->
-
+    <script src="blog.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
