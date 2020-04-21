@@ -1,25 +1,30 @@
 /*search for word in a string*/
 
 #include <stdio.h>
-
 int  search(char *str1, char *str2)
 {
-	int j=0, i=0,l;
+	int j, i,l;
 	for( l=0;str2[l]!='\0';l++); //check length of substring
-
+	 j=0,i=0;
 	while(str1[i]!='\0' && str2[j]!='\0')
 	{
 		if(str1[i]==str2[j])
-			j++;
+        {
+            j++;
+        }
+			
 
-		else 
-			j=0;
-
+		else
+        {
+            j=0;
+        }
+         
 		i++;
 	}
+	printf("%d %d %d",i,j,l);
 
 	if(l==j)
-		return i-j;
+		return (i-j);
 	else 
 		return -1;
 }
