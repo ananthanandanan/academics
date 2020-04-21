@@ -12,7 +12,7 @@ int main() {
     sec = (int)s[1]-48;
 
     num = f*10 + sec;
-    printf("The mod of %d is %d",num,num%5);
+    printf("The mod of %d is %d",num,(num%5));
 
 
     return 0;
