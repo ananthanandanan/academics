@@ -21,7 +21,7 @@ int  search(char *str1, char *str2)
          
 		i++;
 	}
-	printf("%d %d %d",i,j,l);
+	
 
 	if(l==j)
 		return (i-j);
