@@ -1,14 +1,11 @@
 #include<stdio.h> 
-#include <string.h> 
+#include<string.h> 
   
-int main() 
-{ 
-  char str[] = "CompuTer ScienCe PoRTAl fOr geeKS"; 
-  
-  printf("Given string is: %s\n",str); 
-  
-  printf("\nString after converting to the "
-             "lowercase is: %s",strlwr(str)); 
-  
-  return 0; 
-} 
+int main()
+{
+
+char s[100]="Amrita",t[100];
+strncpy(t,strcat(strcat(s," "),"Campus"),6);
+printf("%s", t);
+return 0;
+}
