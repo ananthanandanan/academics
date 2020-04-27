@@ -1,4 +1,22 @@
 #include <stdio.h>
+#define N 10
+
+void transpose(int a[][N], int row,int col)
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = i+1; j < col; j++)
+        {   
+            int temp = a[i][j];
+            a[i][j] = a[j][i];
+            a[j][i] = temp;
+        }
+    } 
+
+    return ;
+         
+            
+}
 
 int main(){
 
@@ -9,7 +27,7 @@ int main(){
     scanf("%d",&r);
     scanf("%d",&c);
 
-    int a[r][c], b[r][c];
+    int a[r][c];
     printf("enter the elements of a\n ");
 
 
@@ -22,7 +40,10 @@ int main(){
         printf("\n");
 
     }
-    printf("enter the elements of b\n ");
+
+    // transpose
+    transpose(a,r,c);
+   /* printf("enter the elements of b\n ");
     //sec mat
     for(int i=0; i<r;i++){
         
@@ -32,21 +53,21 @@ int main(){
         }
         printf("\n");
 
-    }
+    }*/
     //print sum of a and b
 
     for(int i=0; i<r;i++)
     {
         printf("\n");
         for(int j=0;j<c;j++)
-        printf("%d ",a[i][j]+b[i][j]);
+        printf("%d ",a[i][j]);
     }
         // diff of a and b
-    for(int i=0; i<r;i++){
+    /*for(int i=0; i<r;i++){
         printf("\n");
         for(int j=0;j<c;j++)
         printf("%d ",a[i][j]-b[i][j]);
-    }
+    }*/
 
     return 0;
 }
