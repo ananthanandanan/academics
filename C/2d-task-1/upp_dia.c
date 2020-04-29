@@ -56,7 +56,14 @@ int main() {
         printf("\n"); 
        
     } 
-    printf("The sum is %d\n",sum);
+
+    if(sum >= 100)
+    printf("YES");
+    else
+    {
+        printf("NO");
+    }
+    
 
 
     return 0;
