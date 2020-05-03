@@ -1,88 +1,104 @@
-#include<stdio.h>
-void initiate(int a[10][10],int n)
+#include <stdio.h>
+
+void initiate(int a[10][10], int n, int m)
 {
     printf("elements?\n");
     for(int r=0;r<n;++r)
     {
-        for(int c=0;c<n;++c)
+        for(int c=0;c<m;++c)
         {
             scanf("%d",&a[r][c]);
         }
     }
 }
-void print(int a[10][10],int n)
-{
-    for(int r=0;r<n;++r)
-    {
-        for(int c=0;c<n;++c)
-        {
-            printf("%d",a[r][c]);printf("  ");
-        }
-        printf("\n");
-    }
 
-}
-void insertion(int a[10][10],int d[10],int n)
-{
-    int i=0;
-    for(int r=0;r<n;++r)
-    {
-        for(int c=0;c<n;++c)
-        {
-            if(c==n-1-r)
-            {
-                a[r][c]=d[i];i+=1;
-            }
-        }
-    }
-    print(a,n);
-}
-
-void swap(int x,int y)
+void swap(int *x,int *y)
 {
     int t;
-    t=x;
-    x=y;
-    y=t;
+    t = *x;
+    *x = *y;
+    *y = t;
 }
-void sort(int a[10][10],int d[],int n)
-{
-    for(int i=0;i<=n-1;++i)
+
+void Sort(int p[10], int n)
+{   
+    for(int i=0;i<=n-1;i++)
     {
-        for(int j=0;j<=n-1-i;++j)
+        for(int j=0;j<=n-1-i;j++)
         {
-            if(d[j]>d[j+1])
+            if(p[j]>p[j+1])
             {
-                swap(d[j],d[j+1]);
+                swap(&p[j], &p[j+1]);
             }
         }
     }
-    insertion(a,d,n);
+
+    return ;
+
 }
 
-
-int antidia(int a[10][10],int n)
+void Insert(int a[10][10], int n,int m, int p[10])
 {
-    int d[10],i=0;
+    int k=0;
     for(int r=0;r<n;++r)
     {
-        for(int c=0;c<n;++c)
+        for(int c=0;c<m;++c)
         {
-            if(c==n-1-r)
+            if(r+c==(n-1))
             {
-                d[i]=a[r][c];i+=1;   
+                a[r][c] = p[k++];
             }
         }
-    }
-    sort(a,d,n);
+    } 
+    
 }
-void main()
-{
-    int a[10][10];
-    int n;
-    printf("rows or columns?");
-    scanf("%d",&n);
-    initiate(a,n);
-    antidia(a,n);
 
+void anti_pick(int a[10][10], int n, int m,int p[10] )
+{   int k=0;
+    for(int r=0;r<n;++r)
+    {
+        for(int c=0;c<m;++c)
+        {
+            if(r+c==(n-1))
+            {
+                p[k++] = a[r][c];
+            }
+        }
+    } 
+    return ;   
+}
+
+
+
+int main() {
+
+    int A[10][10],pick[10],row,col;
+    printf("enter the rows and columns:\n");
+    scanf("%d",&row);
+    scanf("%d",&col);
+
+    //declare the array
+    initiate(A, row, col);
+    anti_pick(A, row, col, pick);
+    Sort(pick, row);
+    Insert(A, row, col, pick);
+
+    printf("New matrix is:\n");
+
+    for(int i = 0; i < row; i++) 
+    { 
+        for (int j = 0; j < col; j++) 
+        {
+             printf("%d ", A[i][j]); 
+             
+        }
+        printf("\n"); 
+       
+    } 
+
+
+
+
+
+    return 0;
 }
