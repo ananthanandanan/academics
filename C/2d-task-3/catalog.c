@@ -5,6 +5,7 @@
 #include<stdlib.h>
 
 int add=0;
+//Add the books
 void Addit(char C[10][5][50],int NoC,int NoR, int *add)
 {   
     int i,j,k;
@@ -43,7 +44,7 @@ void Searchlib(char C[10][5][50], char *title, int NoC, int NoR)
     {
         for(j=0;j<NoR;j++)
         {
-            if(strcmp(C[i][j],title)==0)
+            if(strcmp(C[i][j],title)==0) //finds the matching
             {   
                 cud=i+1;
                 rack=j+1;
