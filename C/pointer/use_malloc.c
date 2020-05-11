@@ -12,6 +12,7 @@
 #define MIN(a, b) ((a) > (b) ? (b) : (a))
 #define Swap(a,b) a^=b^=a^=b;
 #define Alloc(type,n) (type *)calloc(n,sizeof(type));
+#define MatAlloc(type,n) (type**)calloc(n,sizeof(type *))
 
 //calloc syntax ptr = (int *)calloc(n,sizeof(int));
 //malloc syntax ptr=  (int *)malloc(n*sizeof(int));
