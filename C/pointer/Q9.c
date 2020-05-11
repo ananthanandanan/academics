@@ -9,7 +9,7 @@
 #define Div(x,y) x/y
 #define Mod(x,y) x%y
 #define MAX(a, b) ((a) < (b) ? (b) : (a))
-#define MIN(a, b) ((a) > (b) ? (b) : (a))
+#define MIN(a, b) ((a) > (b) ? (b) : (a)) 
 #define Swap(a,b) a^=b^=a^=b;
 #define Alloc(type,n) (type *)calloc(n,sizeof(type))
 #define MatAlloc(type,n) (type**)calloc(n,sizeof(type *))
