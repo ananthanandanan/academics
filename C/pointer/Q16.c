@@ -77,7 +77,7 @@ int  **multiplyMatrices(int **first, int **second, int **mult, int r1, int c1, i
 }
 
 void Print(int **arr1, int rows, int columns)
-{   printf("Added result\n");
+{   printf("result\n");
     for(int i=0; i<rows;i++)
     {
         for(int j=0;j<columns;j++)
@@ -95,7 +95,7 @@ int main() {
     int rows, columns, **arr1, **arr2, **mult,choice,row2,col2 ;
     printf("enter the no of rows and columns of mat-1\n");
     scanf("%d %d",&rows,&columns);
-    printf("enter the no of rows and columns of mat-1\n");
+    printf("enter the no of rows and columns of mat-2\n");
     scanf("%d %d",&row2,&col2);
     printf("enter the choice 1-add 2-Mutiple\n");
     scanf("%d",&choice);

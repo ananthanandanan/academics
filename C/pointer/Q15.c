@@ -20,9 +20,9 @@ int main() {
     char *str1, *str2;
     str1 = Malloc(char,SIZE);
     str2 = Malloc(char,SIZE);
-    printf("enter the first string-1\n");
+    printf("enter the  string-1\n");
     scanf("%s",str1);
-    printf("enter the second string-1\n");
+    printf("enter the string-2\n");
     scanf("%s",str2);
     printf("The  string-1 is : %s\n",str1);
     printf("The  string-2 is : %s\n",str2);

@@ -17,7 +17,7 @@ int main() {
     int a1[SIZE], a2[SIZE],limit;
     printf("Enter the limit of array:\n");
     scanf("%d",&limit);
-    printf("Enter the limit of a1:\n");
+    printf("Enter the elements of a1:\n");
 
     for (int i = 0; i < limit; i++)
     {

@@ -14,7 +14,7 @@ int main() {
     one = &num1;
     two = &num2;
     three = &s;
-    printf("The float value is%.2f,double is%lf %c\n",(*one),(*two),(*three));
+    printf("The float value is%.2f,double is%lf and character is %c\n",(*one),(*two),(*three));
 
     return 0;
 }

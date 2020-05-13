@@ -64,7 +64,7 @@ void sort(char **str,int limit)
 }
 
 void Print(char **arr1, int limit)
-{   printf("the string\n");
+{   printf("the string:\n");
    
         for(int j=0;j<limit;j++)
         {
