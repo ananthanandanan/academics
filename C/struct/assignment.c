@@ -23,6 +23,7 @@
 #define Alloc(type,n) (type *)calloc(n,sizeof(type))
 #define MatAlloc(type,n) (type**)calloc(n,sizeof(type *))
 #define Malloc(type,n) (type *)malloc(n*sizeof(type))
+#define Clear printf("\e[1;1H\e[2J")
 
 struct student
 {   
@@ -36,25 +37,26 @@ void Read( struct student *stud)
 {  
     int i,j;
      for(i=0;i<5;i++)
-    {
-    printf("STUDENT-%d\n",i+1);
-    printf("-----------\n");    
-    printf("enter the roll \n");
-    scanf("%d",&((stud + i)->roll));
-    printf("enter the name \n");
-    scanf("%s",&((stud + i)->name));
-    for(j=0;j<3;j++)
-    {   if(j==0)
-            printf("enter the marks in maths\n");
-        else if(j==1)
-            printf("enter the marks in sanskrit\n");
-        else 
-            printf("enter the marks in programming\n");
-        scanf("%f",&((stud + i)->mark[j]));
-       
-    }
+    {   Clear;
+        printf("STUDENT-%d\n",i+1);
+        printf("-----------\n");    
+        printf("enter the roll \n");
+        scanf("%d",&((stud + i)->roll));
+        printf("enter the name \n");
+        scanf("%s",&((stud + i)->name));
+        for(j=0;j<3;j++)
+        {   if(j==0)
+                printf("enter the marks in maths\n");
+            else if(j==1)
+                printf("enter the marks in sanskrit\n");
+            else 
+                printf("enter the marks in programming\n");
+            scanf("%f",&((stud + i)->mark[j]));
+        
+        }
    
-    }    
+    }
+        
     return;
 }
 
@@ -120,6 +122,7 @@ int main()
     struct student s[5];
     int choice,roll;
     Read(s);
+    Clear;
     printf("enter the choice of you want\n");
     printf("[1]->Display names\n[2]->Display average marks of all students\n[3]->search for a student based on roll number[4]-> to exit\n ");
     scanf("%d",&choice);
@@ -139,6 +142,7 @@ int main()
             default: printf("invalid choice");
             
         }
+        Clear;
         printf("Enter the choice ");
         printf("[1]->Display names\n[2]->Display average marks of all students\n[3]->search for a student based on roll number\n ");
         scanf("%d",&choice);
