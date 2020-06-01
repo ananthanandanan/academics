@@ -1,11 +1,10 @@
 #include <stdio.h>
- 
 #define MaxSize 100
- 
+
 int stackA[MaxSize],stackB[MaxSize],stackC[MaxSize];
- 
+
 int sizeA=0,sizeB=0,sizeC=0;
- 
+
 void Push(int *stack,int item, int *size)
 {
 	if((*size)>MaxSize)
@@ -18,7 +17,7 @@ void Push(int *stack,int item, int *size)
 		(*size)++;
 	}
 }
- 
+
 int Pop(int *stack, int *size)
 {
 	if( (*size) <= 0 )
@@ -32,7 +31,7 @@ int Pop(int *stack, int *size)
 		return x;
 	}
 }
- 
+
 void copy_A_to_C()
 {
 	int x;
@@ -56,13 +55,13 @@ void PrintStack(int *stack)
     }
     return;
 }
- 
+
 int main()
 {
 	int size, I, item;
     printf("enter the size\n");
 	scanf("%d",&size);
- 
+
 	for(I = 0; I<size; I++)
 	{   printf("enter the item\n");
 		scanf("%d",&item);

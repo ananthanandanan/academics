@@ -16,7 +16,6 @@ for i in range(r):
 
 for i in range(c):
     m =[]
-  
 
     for col in A :
         m.append(col[i])

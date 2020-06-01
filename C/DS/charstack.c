@@ -37,7 +37,8 @@ void pop()
 }
 char peek()
 {
-   return stack[top];
+return stack[top];
+
 }
 void printstack()
 {
@@ -58,8 +59,8 @@ char item;
        printf("Enter your choice : ");
        scanf("%d",&choice);
        switch(choice)
-       {
-           case 1:
+    {
+            case 1:
                     {
                         printf("Enter the element to be inserted : ");
                         scanf(" %c",&item);
@@ -95,8 +96,9 @@ char item;
                         printf("Wrong choice");
                         break;
                     }
-       }
+                    
+    }
     } while (choice<=5);
-   
+
 return 0;
 }
