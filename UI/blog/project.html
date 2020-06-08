@@ -1,76 +1,668 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
-    <link rel="stylesheet"type="text/css" href="style.css"> 
-   
-</head>
-<body>
-  <header>
-    <!--Nav bar-->
-  
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-    <span class="open-slide">
-      <a href="#" onclick="openSlideMenu()">
-        <svg width="30" height="30">
-            <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
-            <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
-            <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
-        </svg>
-      </a>
-    </span>
-    <a class="navbar-brand" href="#">ANK</a>
-    
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav"> <!--navbar to left-->
+<html>
+<head><meta charset="utf-8" />
 
-        <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="blogpost.html">BlogPost</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="project.html">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html">Portfolio</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-        
-        
-      </ul>
+<title>covid19-gram</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
      
+
+
+
+
+
+
+
+<style type="text/css">
+    /* Overrides of notebook CSS for static HTML export */
+    body {
+      overflow: visible;
+      padding: 8px;
+    }
+    
+    div#notebook {
+      overflow: visible;
+      border-top: none;
+    }@media print {
+      div.cell {
+        display: block;
+        page-break-inside: avoid;
+      } 
+      div.output_wrapper { 
+        display: block;
+        page-break-inside: avoid; 
+      }
+      div.output { 
+        display: block;
+        page-break-inside: avoid; 
+      }
+    }
+    </style>
+    
+    <!-- Custom stylesheet, it must be in the same directory as the html file -->
+    <link rel="stylesheet"type="text/css" href="style.css">
+    <link rel="stylesheet" href="custom.css">
+    
+    <!-- Loading mathjax macro -->
+    <!-- Load mathjax -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS_HTML"></script>
+        <!-- MathJax configuration -->
+        <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                processEscapes: true,
+                processEnvironments: true
+            },
+            // Center justify equations in code and markdown cells. Elsewhere
+            // we use CSS to left justify single line equations in code cells.
+            displayAlign: 'center',
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}},
+                linebreaks: { automatic: true }
+            }
+        });
+        </script>
+        <!-- End of mathjax configuration --></head>
+    <body>
+        <header>
+            <!--Nav bar-->
+          
+          <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+            <span class="open-slide">
+              <a href="#" onclick="openSlideMenu()">
+                <svg width="30" height="30">
+                    <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+                    <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+                    <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+                </svg>
+              </a>
+            </span>
+            <a class="navbar-brand" href="#">ANK</a>
+            
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav"> <!--navbar to left-->
+        
+                <li class="nav-item active">
+                  <a class="nav-link" href="home.html">Home </a>
+                </li>
+        
+                <li class="nav-item">
+                  <a class="nav-link" href="project.html">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="portfolio.html">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                
+                
+              </ul>
+             
+            </div>
+          </nav>
+         <!--slide-menu-->
+         <div id="side-menu" class="side-nav">
+           <div class="slide-height" style="height: 30px;"></div>
+          <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+          <a href="index.html">Home</a>
+          <a href="blogpost.html">BlogPost</a>
+          <a href="project.html">Project</a>
+          <a href="portfolio.html">Portfolio</a>
+          <a href="contact.html">Contact</a>
+         </div>
+        <div id="main">
+          <div class="spacing" style="height: 40px;"></div>
+          </header>
+
+
+
+      <div tabindex="-1" id="notebook" class="border-box-sizing">
+        <div class="container" id="notebook-container">
+    
+    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+    </div><div class="inner_cell">
+    <div class="text_cell_render border-box-sizing rendered_html">
+    <h3 id="Research-on-COVID-19-keyword-search">Research on COVID-19 keyword search<a class="anchor-link" href="#Research-on-COVID-19-keyword-search">&#182;</a></h3>
     </div>
-  </nav>
- <!--slide-menu-->
- <div id="side-menu" class="side-nav">
-   <div class="slide-height" style="height: 30px;"></div>
-  <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
-  <a href="index.html">Home</a>
-  <a href="blogpost.html">BlogPost</a>
-  <a href="project.html">Project</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="contact.html">Contact</a>
- </div>
-<div id="main">
-  <div class="spacing" style="height: 40px;"></div>
-  </header>
-  <div class="container">
-    <center>
-      <h1> My Project </h1>
-    </center>
     </div>
-<script src="blog.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-</body>
-</html>
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[1]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Python program to generate WordCloud </span>
+      
+    <span class="c1"># importing all necessery modules </span>
+    <span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span><span class="p">,</span> <span class="n">STOPWORDS</span> 
+    <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+    <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span> 
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[6]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;frequent_terms.csv&quot;</span><span class="p">,</span><span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="n">comment_words</span> <span class="o">=</span> <span class="s1">&#39;&#39;</span> 
+    <span class="n">stopwords</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">STOPWORDS</span><span class="p">)</span> 
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[7]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># iterate through the csv file </span>
+    <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span> 
+          
+        <span class="c1"># typecaste each val to string </span>
+        <span class="n">val</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">val</span><span class="p">[</span><span class="s1">&#39;term&#39;</span><span class="p">])</span>
+      
+        <span class="c1"># split the value </span>
+        <span class="n">tokens</span> <span class="o">=</span> <span class="n">val</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> 
+          
+        <span class="c1"># Converts each token into lowercase </span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">tokens</span><span class="p">)):</span> 
+            <span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">tokens</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> 
+          
+        <span class="n">comment_words</span> <span class="o">+=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tokens</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot; &quot;</span>
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[8]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> <span class="n">height</span> <span class="o">=</span> <span class="mi">800</span><span class="p">,</span> 
+                    <span class="n">background_color</span> <span class="o">=</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> 
+                    <span class="n">stopwords</span> <span class="o">=</span> <span class="n">stopwords</span><span class="p">,</span> 
+                    <span class="n">min_font_size</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">comment_words</span><span class="p">)</span> 
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[9]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># plot the WordCloud image                        </span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">),</span> <span class="n">facecolor</span> <span class="o">=</span> <span class="kc">None</span><span class="p">)</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">)</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span> 
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">(</span><span class="n">pad</span> <span class="o">=</span> <span class="mi">0</span><span class="p">)</span> 
+      
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span> 
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    <div class="output_wrapper">
+    <div class="output">
+    
+    
+    <div class="output_area">
+    
+        <div class="prompt"></div>
+    
+    
+    
+    
+    <div class="output_png output_subarea ">
+    <img src="assets/picture/pic_1.png">
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[10]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    <div class="output_wrapper">
+    <div class="output">
+    
+    
+    <div class="output_area">
+    
+        <div class="prompt output_prompt">Out[10]:</div>
+    
+    
+    
+    
+    <div class="output_text output_subarea output_execute_result">
+    <pre>(1000, 2)</pre>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[11]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stats</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;term&quot;</span><span class="p">)</span>
+    <span class="n">stats</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    <div class="output_wrapper">
+    <div class="output">
+    
+    
+    <div class="output_area">
+    
+        <div class="prompt output_prompt">Out[11]:</div>
+    
+    
+    
+    <div class="output_html rendered_html output_subarea output_execute_result">
+    <div>
+    <style scoped>
+        .dataframe tbody tr th:only-of-type {
+            vertical-align: middle;
+        }
+    
+        .dataframe tbody tr th {
+            vertical-align: top;
+        }
+    
+        .dataframe thead tr th {
+            text-align: left;
+        }
+    
+        .dataframe thead tr:last-of-type th {
+            text-align: right;
+        }
+    </style>
+    <table border="1" class="dataframe">
+      <thead>
+        <tr>
+          <th></th>
+          <th colspan="8" halign="left">counts</th>
+        </tr>
+        <tr>
+          <th></th>
+          <th>count</th>
+          <th>mean</th>
+          <th>std</th>
+          <th>min</th>
+          <th>25%</th>
+          <th>50%</th>
+          <th>75%</th>
+          <th>max</th>
+        </tr>
+        <tr>
+          <th>term</th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>00</th>
+          <td>1.0</td>
+          <td>170297.0</td>
+          <td>NaN</td>
+          <td>170297.0</td>
+          <td>170297.0</td>
+          <td>170297.0</td>
+          <td>170297.0</td>
+          <td>170297.0</td>
+        </tr>
+        <tr>
+          <th>000</th>
+          <td>1.0</td>
+          <td>1286928.0</td>
+          <td>NaN</td>
+          <td>1286928.0</td>
+          <td>1286928.0</td>
+          <td>1286928.0</td>
+          <td>1286928.0</td>
+          <td>1286928.0</td>
+        </tr>
+        <tr>
+          <th>03</th>
+          <td>1.0</td>
+          <td>137985.0</td>
+          <td>NaN</td>
+          <td>137985.0</td>
+          <td>137985.0</td>
+          <td>137985.0</td>
+          <td>137985.0</td>
+          <td>137985.0</td>
+        </tr>
+        <tr>
+          <th>04</th>
+          <td>1.0</td>
+          <td>134238.0</td>
+          <td>NaN</td>
+          <td>134238.0</td>
+          <td>134238.0</td>
+          <td>134238.0</td>
+          <td>134238.0</td>
+          <td>134238.0</td>
+        </tr>
+        <tr>
+          <th>10</th>
+          <td>1.0</td>
+          <td>773314.0</td>
+          <td>NaN</td>
+          <td>773314.0</td>
+          <td>773314.0</td>
+          <td>773314.0</td>
+          <td>773314.0</td>
+          <td>773314.0</td>
+        </tr>
+        <tr>
+          <th>...</th>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <th>être</th>
+          <td>1.0</td>
+          <td>136951.0</td>
+          <td>NaN</td>
+          <td>136951.0</td>
+          <td>136951.0</td>
+          <td>136951.0</td>
+          <td>136951.0</td>
+          <td>136951.0</td>
+        </tr>
+        <tr>
+          <th>और</th>
+          <td>1.0</td>
+          <td>147009.0</td>
+          <td>NaN</td>
+          <td>147009.0</td>
+          <td>147009.0</td>
+          <td>147009.0</td>
+          <td>147009.0</td>
+          <td>147009.0</td>
+        </tr>
+        <tr>
+          <th>कर</th>
+          <td>1.0</td>
+          <td>254516.0</td>
+          <td>NaN</td>
+          <td>254516.0</td>
+          <td>254516.0</td>
+          <td>254516.0</td>
+          <td>254516.0</td>
+          <td>254516.0</td>
+        </tr>
+        <tr>
+          <th>पर</th>
+          <td>1.0</td>
+          <td>173157.0</td>
+          <td>NaN</td>
+          <td>173157.0</td>
+          <td>173157.0</td>
+          <td>173157.0</td>
+          <td>173157.0</td>
+          <td>173157.0</td>
+        </tr>
+        <tr>
+          <th>रह</th>
+          <td>1.0</td>
+          <td>170767.0</td>
+          <td>NaN</td>
+          <td>170767.0</td>
+          <td>170767.0</td>
+          <td>170767.0</td>
+          <td>170767.0</td>
+          <td>170767.0</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>999 rows × 8 columns</p>
+    </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[12]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">freq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">stats</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span> <span class="c1">#top 5 words used.</span>
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[13]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">stats</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    <div class="output_wrapper">
+    <div class="output">
+    
+    
+    <div class="output_area">
+    
+        <div class="prompt output_prompt">Out[13]:</div>
+    
+    
+    
+    <div class="output_html rendered_html output_subarea output_execute_result">
+    <div>
+    <style scoped>
+        .dataframe tbody tr th:only-of-type {
+            vertical-align: middle;
+        }
+    
+        .dataframe tbody tr th {
+            vertical-align: top;
+        }
+    
+        .dataframe thead th {
+            text-align: right;
+        }
+    </style>
+    <table border="1" class="dataframe">
+      <thead>
+        <tr style="text-align: right;">
+          <th></th>
+          <th>term</th>
+          <th>counts</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>0</th>
+          <td>coronavirus</td>
+          <td>34939377</td>
+        </tr>
+        <tr>
+          <th>1</th>
+          <td>covid19</td>
+          <td>12968418</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>covid</td>
+          <td>12889136</td>
+        </tr>
+        <tr>
+          <th>3</th>
+          <td>19</td>
+          <td>12359270</td>
+        </tr>
+        <tr>
+          <th>4</th>
+          <td>NaN</td>
+          <td>5296239</td>
+        </tr>
+        <tr>
+          <th>...</th>
+          <td>...</td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <th>995</th>
+          <td>só</td>
+          <td>129279</td>
+        </tr>
+        <tr>
+          <th>996</th>
+          <td>ta</td>
+          <td>129067</td>
+        </tr>
+        <tr>
+          <th>997</th>
+          <td>31</td>
+          <td>129018</td>
+        </tr>
+        <tr>
+          <th>998</th>
+          <td>wish</td>
+          <td>128512</td>
+        </tr>
+        <tr>
+          <th>999</th>
+          <td>tomorrow</td>
+          <td>128385</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>1000 rows × 2 columns</p>
+    </div>
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing code_cell rendered">
+    <div class="input">
+    <div class="prompt input_prompt">In&nbsp;[14]:</div>
+    <div class="inner_cell">
+        <div class="input_area">
+    <div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+    <span class="n">freq</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;counts&quot;</span><span class="p">,</span><span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">bar</span><span class="p">()</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">(</span><span class="n">rotation</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;words&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s2">&quot;word frequency&quot;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    </pre></div>
+    
+        </div>
+    </div>
+    </div>
+    
+    <div class="output_wrapper">
+    <div class="output">
+    
+    
+    <div class="output_area">
+    
+        <div class="prompt"></div>
+    <div class="output_text output_subarea ">
+    <pre>&lt;Figure size 1080x720 with 0 Axes&gt;</pre>
+    </div>
+    
+    </div>
+    
+    <div class="output_area">
+    
+        <div class="prompt"></div>
+    <div class="output_png output_subarea ">
+    <img src="assets/picture/pic_2.png">
+    </div>
+    
+    </div>
+    
+    </div>
+    </div>
+    
+    </div>
+    <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+    </div><div class="inner_cell">
+    <div class="text_cell_render border-box-sizing rendered_html">
+    <h3 id="END">END<a class="anchor-link" href="#END">&#182;</a></h3>
+    </div>
+    </div>
+    </div>
+        </div>
+      </div>
+      <script src="blog.js"></script>
+    </body>
+    </html>
+    

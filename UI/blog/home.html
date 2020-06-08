@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link rel="stylesheet"type="text/css" href="style.css"> 
+   
+</head>
+<body>
+  <header>
+    <!--Nav bar-->
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <span class="open-slide">
+      <a href="#" onclick="openSlideMenu()">
+        <svg width="30" height="30">
+            <path d="M0,5 30,5" stroke="#000" stroke-width="5"/>
+            <path d="M0,14 30,14" stroke="#000" stroke-width="5"/>
+            <path d="M0,23 30,23" stroke="#000" stroke-width="5"/>
+        </svg>
+      </a>
+    </span>
+    <a class="navbar-brand" href="#">ANK</a>
+    
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav"> <!--navbar to left-->
+
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="project.html">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio.html">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+        
+        
+      </ul>
+     
+    </div>
+  </nav>
+ <!--slide-menu-->
+ <div id="side-menu" class="side-nav">
+   <div class="slide-height" style="height: 30px;"></div>
+  <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+  <a href="home.html">Home</a>
+  <a href="project.html">Project</a>
+  <a href="portfolio.html">Portfolio</a>
+  <a href="contact.html">Contact</a>
+ </div>
+<div id="main">
+  <div class="spacing" style="height: 40px;"></div>
+  
+  <div class="showcase">
+  <div class="content">
+    <img src="./assets/picture/logo.png" class="logo" alt="ANK">
+    <div class="title">
+      Welcome To ANK Blog
+    </div>
+    <div class="text">
+      this is my daily  life 
+    </div>
+  </div>
+</div>
+</header>
+
+<!--service-->
+<section class="service">
+  <div class="container grid-3">
+    <div>
+    <i class="fab fa-github fa-3x"></i>
+    <h3>Github</h3>
+   </div>
+   <div>
+    <i class="fab fa-gitlab fa-3x"></i>
+    <h3>Gitlab</h3>
+   </div>
+   <div>
+    <i class="fab fa-linkedin-in fa-3x"></i>
+    <h3>Linkedin </h3>
+   </div>
+  </div>
+</section>
+<!--about-->
+<section class="about bg-light">
+  <div class="container">
+    <div class="grid-2">
+      <div class="center">
+        <i class="fas fa-code fa-10x"></i>
+      </div>
+      <div>
+        <h3>About this Website</h3>
+      </div>
+    </div>
+  
+
+</section>
+<!--footer-->
+<footer class="center bg-dark">
+  <p>Ananthan2k &copy; 2020</p>
+</footer>
+</div>
+
+    
+    
+    <!--footer-->
+    <!--JS, jquery,pooper.js-->
+    <script src="blog.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+</html>
