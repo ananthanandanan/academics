@@ -33,13 +33,13 @@ char  **MEM_Alloc(int n,int size)
 void Read(char **arr, int limit)
 {   
     printf("enter the elements of array\n ");
-   
+
     
         for(int j=0;j<limit;j++)
         {
             scanf("%s",arr[j]);
         }
-   
+
     return;
 }
 
@@ -65,12 +65,12 @@ void sort(char **str,int limit)
 
 void Print(char **arr1, int limit)
 {   printf("the string:\n");
-   
+
         for(int j=0;j<limit;j++)
         {
-           printf("%s \n",arr1[j]);
+        printf("%s \n",arr1[j]);
         }
-      
+    
     
     return;
 }

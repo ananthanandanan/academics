@@ -13,6 +13,6 @@ int main() {
     int prod;
     prod = (*one)*(*two);
     printf("prod is %d\n",prod);
-     
+    
     return 0;
 }
