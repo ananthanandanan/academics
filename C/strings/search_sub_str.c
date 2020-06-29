@@ -5,10 +5,10 @@ int  search(char *str1, char *str2)
 {
 	int j, i,l;
 	for( l=0;str2[l]!='\0';l++); //check length of substring
-	 j=0,i=0;
+	j=0,i=0;
 	while(str1[i]!='\0' && str2[j]!='\0')
 	{
-		if(str1[i]==str2[j])
+		if(str1[i]==str2[j]) // str2 is repeated each time to check if it is in str1
         {
             j++;
         }
@@ -18,7 +18,7 @@ int  search(char *str1, char *str2)
         {
             j=0;
         }
-         
+        
 		i++;
 	}
 	

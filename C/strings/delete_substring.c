@@ -31,7 +31,7 @@ void delete_sub(char *str1,char *sub,int index) //delete the substring using lef
 {
     int i,l=0;
     for(l=0;sub[l]!='\0';l++);
-    for(i=index;str1[i+l];i++)
+    for(i=index;i<(index+l);i++)
     {
         str1[i]=str1[i+l];
     }
