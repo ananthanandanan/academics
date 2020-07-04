@@ -1,5 +1,5 @@
-#include<stdio.h>
-# define MAX 5
+#include <stdio.h>
+#define MAX 5
 int cqueue_arr[MAX];
 int front = -1;
 int rear = -1;
@@ -66,7 +66,7 @@ void display()
         while (front_pos <= MAX - 1)
         {
             printf("%d ", cqueue_arr[front_pos]);
-                front_pos++;
+            front_pos++;
         }
         front_pos = 0;
         while (front_pos <= rear_pos)
