@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strutil"
+)
 
 func main() {
 
@@ -8,5 +11,6 @@ func main() {
 	x = 20.0
 	fmt.Println(x)
 	fmt.Printf("x is of type %T\n", x)
+	fmt.Println(strutil.Reverse("olleh"))
 
 }
