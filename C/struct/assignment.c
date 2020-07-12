@@ -9,6 +9,7 @@
 #include <time.h>
 #include <math.h>
 #include <ctype.h>
+#include <unistd.h>
 
 /*macro*/
 #define SIZE 50
@@ -65,6 +66,8 @@ void Print_name(struct student *stud)
     {
         printf(" Name of student-%d is %s \n", i + 1, (stud + i)->name);
     }
+
+    
     return;
 }
 
@@ -82,6 +85,8 @@ void Print_avg(struct student *stud)
         average = sum / 3.0;
         printf("the average mark of student %d is %f \n", i + 1, average);
     }
+
+    
     return;
 }
 
@@ -105,6 +110,7 @@ void Search(struct student *stud, int roll)
             }
         }
     }
+    
 
     return;
 }
@@ -114,6 +120,7 @@ int main()
 
     struct student s[5];
     int choice, roll;
+    char refresh;
     Read(s);
     Clear;
     printf("enter the choice of you want\n");
@@ -140,6 +147,7 @@ int main()
         default:
             printf("invalid choice");
         }
+        sleep(3); //sleep for 3 seconds
         Clear;
         printf("Enter the choice ");
         printf("[1]->Display names\n[2]->Display average marks of all students\n[3]->search for a student based on roll number\n ");
