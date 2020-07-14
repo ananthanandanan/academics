@@ -54,7 +54,6 @@ int main()
     fwrite(stud, sizeof(stud), 1, fptr);
 
     fclose(fptr);
-     
 
     return 0;
 }

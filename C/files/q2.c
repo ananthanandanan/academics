@@ -34,12 +34,10 @@ int main()
     fread(stud, sizeof(stud), 1, fptr);
     for (i = 0; i < 3; i++)
     {
-        printf("%s\n",stud[i].name);
-        
+        printf("%s\n", stud[i].name);
     }
 
     fclose(fptr);
-    
 
     return 0;
 }
