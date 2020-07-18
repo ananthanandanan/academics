@@ -2,9 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define Alloc(type, n) (type *)calloc(n, sizeof(type))
-#define MatAlloc(type, n) (type **)calloc(n, sizeof(type *))
-#define Malloc(type, n) (type *)malloc(n * sizeof(type))
+
 #define Clear printf("\e[1;1H\e[2J")
 
 struct student
@@ -46,7 +44,7 @@ int main()
         printf("the file has opened\n");
     struct student stud[3];
     int i, n;
-    printf("enter the no of students to enter\n");
+    printf("enter 3 student details\n");
     scanf("%d", &n);
     // Read the student details.
     Read(stud, n);

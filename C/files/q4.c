@@ -4,7 +4,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#define Malloc(type, n) (type *)malloc(n * sizeof(type))
+
 #define Clear printf("\e[1;1H\e[2J")
 
 struct student
