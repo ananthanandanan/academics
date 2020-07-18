@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define rectArea(l,b)  l*b
+#define rectArea(l, b) l *b
 
 int main()
 {
