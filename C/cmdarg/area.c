@@ -1,3 +1,9 @@
+/*
+*K N Anantha nandanan
+*AM.EN.U4CSE19326
+*/
+
+
 #include <stdio.h>
 
 #define PI 3.14

@@ -1,3 +1,9 @@
+/*
+*K N Anantha nandanan
+*AM.EN.U4CSE19326
+*/
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
