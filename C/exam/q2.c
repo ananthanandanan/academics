@@ -1,20 +1,22 @@
 
-#include <stdio.h>
+
 
  
 // Assume that from within the
 // main function the string "Discovery Channel"
 // is passed as as argument to the abc function 
- 
-void abc()
+union number
 {
-    char c[3];
-    int i=0;
-    if(c[i]=getchar()!='d')
-    printf ("%d", c[i]);
-}
+    int x;
+    int y;
+};
 
-int main() {
-    abc();
-    return 0;
+#include <stdio.h>
+#include <stdlib.h>
+int main() 
+{char kali[100];
+ ptr=fopen("Amrita.txt","r");
+while(fgets(Kali,6,ptr)!=NULL)
+puts(Kali);
+fclose(ptr);
 }

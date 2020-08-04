@@ -28,7 +28,7 @@ int main() {
     printf("The  string-2 is : %s\n",str2);
 
     //reallocate str1
-    str1 = realloc(str1,(2*SIZE+1)*sizeof(char));
+    str1 = (char *)realloc(str1,(2*SIZE)*sizeof(char));
     strcat(str1,str2);
     printf("The concat string is : %s\n",str1);
 

@@ -20,7 +20,7 @@
 #define Fabs(x) fabs(x)
 #define MAX(a, b) ((a) < (b) ? (b) : (a))
 #define MIN(a, b) ((a) > (b) ? (b) : (a))
-#define Swap(a, b) a ^= b ^= a ^= b;
+#define Swap(a, b) a ^= b ^= a ^= b
 #define Alloc(type, n) (type *)calloc(n, sizeof(type))
 #define MatAlloc(type, n) (type **)calloc(n, sizeof(type *))
 #define Malloc(type, n) (type *)malloc(n * sizeof(type))

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<body>
+
+    <p><input id="new" type="text"></p>
+    <button id="btn">Click!!</button>
+    <p id="demo"></p>
+
+</body>
+<script>
+    document.getElementById("btn").addEventListener("click", New_text );
+    function New_text(){
+        var Text = document.getElementById("new").value;
+        var to_para = document.getElementById("demo");
+        to_para.innerHTML = "this is the new :" + Text;
+    }
+
+</script>
+
+</html>

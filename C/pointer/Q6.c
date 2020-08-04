@@ -1,45 +1,40 @@
-#include<stdio.h>
+#include <stdio.h>
 #define SIZE 100
 
 void copy(int *a1, int *a2, int *limit)
-{   
-    
+{
+
     for (int i = 0; i < *limit; i++)
-    {   
-        *(a2+i) = *(a1+i);
-        
+    {
+        *(a2 + i) = *(a1 + i);
     }
     return;
 }
 
-int main() {
+int main()
+{
 
-    int a1[SIZE], a2[SIZE],limit;
+    int a1[SIZE], a2[SIZE], limit;
     printf("Enter the limit of array:\n");
-    scanf("%d",&limit);
+    scanf("%d", &limit);
     printf("Enter the elements of a1:\n");
 
     for (int i = 0; i < limit; i++)
     {
-        scanf("%d",&a1[i]);
+        scanf("%d", &a1[i]);
     }
 
-    copy(a1,a2,&limit);
-
+    copy(a1, a2, &limit);
 
     printf("elements of a2 are:\n");
 
     for (int i = 0; i < limit; i++)
     {
-       printf("%d ",a2[i]);
+        printf("%d ", a2[i]);
     }
-    
-    
-    
+
     return 0;
 }
-
-
 
 /*
 7
