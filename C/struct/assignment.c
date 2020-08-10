@@ -64,7 +64,7 @@ void Print_name(struct student *stud)
 {
     for (int i = 0; i < 5; i++)
     {
-        printf(" Name of student-%d is %s \n", i + 1, (stud + i)->name);
+        printf(" Name of student-%d is %s \n", i + 1, (*(stud + i)).name);
     }
 
     
