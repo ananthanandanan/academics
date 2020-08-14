@@ -5,7 +5,7 @@ t = int(input())
 while t!= 0:
     
     n,m = map(int,input().split())
-    grid = list(list(input().replace('',' ').split()) for i in range(n))
+    grid = list(map(int, input().replace('',' ').split()))
     count = 0
     for i in range(n-1):
         if grid[i][m-1]!="D":
