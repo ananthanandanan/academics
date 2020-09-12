@@ -1,27 +1,26 @@
 
-def calculateMex(arr):
-    Mex = 0
-    
-    while( Mex in arr):
-        Mex+=1
-
-    return (Mex)
-
-
-for test in range(int(input())):
-    n = int(input())
-    a = list(map(int, input().split()))
-    a.sort()
-    list1 = []
-    list2 = []
-    for j in range(n):
-        if j % 2 == 0:
-            list1.append(a[j])
-        else:
-            list2.append(a[j])
-    
-    mexA = calculateMex(list1)
-    mexB = calculateMex(list2)
-    
-    print((mexA+mexB))
-    
+from collections import Counter
+for _ in " "*int(input()):
+  n = int(input())
+  a = sorted(list(map(int, input().split())))
+  lst = Counter(a)
+  s = 0
+  sub = []
+  a1 = sorted(set(a))
+  f = 0
+  f1 = 0
+  for i in range(len(a1)):
+    if a1[i] != i:
+      s += i
+      f = 1
+      break
+    if lst[a1[i]] > 1 and f1 == 0:
+        sub.append(a1[i])
+    else:
+      f1 = 1
+  if f == 0:
+    s = a1[-1]+1
+  if len(sub) != 0:
+    print(s+sub[-1]+1)
+  else:
+    print(s)
