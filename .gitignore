@@ -2,3 +2,5 @@ argparse_eg.c
 .vscode/
 a.out
 JS/assignment/Q7/
+Java/**/*.class
+.frama-c/
