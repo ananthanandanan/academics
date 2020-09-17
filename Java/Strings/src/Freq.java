@@ -42,7 +42,7 @@ public class Freq {
                     System.out.println("YES");
                     break;
                 }
-                System.out.println(((int)each-97)+1);
+            
             }
 
             if(check == false){
