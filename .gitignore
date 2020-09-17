@@ -4,3 +4,4 @@ a.out
 JS/assignment/Q7/
 Java/**/*.class
 .frama-c/
+**/__pycache__**/
