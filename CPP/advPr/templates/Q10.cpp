@@ -1,20 +1,20 @@
 #include <iostream>
 #include <string>
-template <typename t>
+template <typename T>
 class Array
 {
 private:
     int n;
-    t a[1000];
+    T a[1000];
 
 public:
     void setlength(int x) { n = x; }
-    void setArray(t b[])
+    void setArray(T b[])
     {
         for (int i = 0; i < n; i++)
             a[i] = b[i];
     }
-    int search(t e) { 
+    int search(T e) { 
         for(int i=0;i<n;i++){
             if(a[i]==e)return i;
         }

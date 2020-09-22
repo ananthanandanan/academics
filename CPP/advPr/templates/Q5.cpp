@@ -34,13 +34,13 @@ int main()
     Pair<int> p1;
     Pair<float> p2;
 
-    cout<<"Enter obj with integer\n";
+    cout<<"Enter two integers\n";
     int n,m;
     cin>>n>>m;
     p1.getName1(n);p1.getName2(m);
     cout<<"The greatest no is: "<<p1.getMax()<<endl;
 
-    cout<<"Enter obj with float\n";
+    cout<<"Enter two floats\n";
     float a,b;
     cin>>a>>b;
     p2.getName1(a);p2.getName2(b);
