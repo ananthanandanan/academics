@@ -1,12 +1,18 @@
+
 import java.util.*;
-//import java.util.Arrays;
+
 
 public class Sticks {
 
 
+    static void Assign(int arr[], int n, Scanner in){
+        for(int i=0;i<n;i++){
+            arr[i]= in.nextInt();
+        }
+    }
 public static void main(String[] args) {
     
-    Scanner in = new Scanner(System.in);
+    Scanner in = new Scanner(System.out);
     int n;
     System.out.println("Enter the length");
     n = in.nextInt();
@@ -14,29 +20,11 @@ public static void main(String[] args) {
     int[] arr = new int[n];
 
     System.out.println("Enter the elements");
+    Sticks.Assign(arr, n, in);
 
-    for(int i=0;i<n;i++){
-        arr[i]= in.nextInt();
-    }
+    //
+    Array.sort(a);
     
-    //sort the array
-
-    Arrays.sort(arr);
-    int small = arr[0];
-
-    System.out.print(arr.length);
-
-    for(int i=1;i<arr.length;i++){
-        
-
-        if(small!=arr[i]){
-            System.out.print(arr.length-i);
-            small= arr[i];
-        }
-    
-
-    }
-
 }
     
 }
