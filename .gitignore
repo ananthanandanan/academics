@@ -5,3 +5,6 @@ JS/assignment/Q7/
 Java/**/*.class
 .frama-c/
 **/__pycache__**/
+*.out
+*.o
+*.class
