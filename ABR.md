@@ -1,0 +1,17 @@
+
+### How much understanding I have of the task at hand?
+
+- The task I am working on is to find a way to fetch or gather all the metadata regarding the quality of audio/video, format, the size of the **segments** of the audio/video chunks etc. In retrospect to the earlier use of Flash player, A new tag(video) was came about which allowed video/audio playback natively. But providing the link to the src of the videotag is still a hassle, because user sudden urge to change the quality of video or live streaming this could be complicated. So thats where the web API- MediaSourceExtension(MSE) comes into play. This act as an object that stores the video/audio data.
+And the reference or link of this object is given in the video tag src. Now MSE itself doesn't help, the sourceBuffers are equally inmortant to provide the adaptive and smooth changes to the video in accordance to the network congestion or the user preferences. Now in the sourceBuffer its not the entire file of video/audio that gets downloaded. Another concept of segments comes into play here. So a video is divided into chunks of audio and video data, varying in size. So this would mean that just the initial chunk or segment is enought for the playback to start. So the segments could be divided into stack of different quality or language or both. Also after the initial burst of the segment, the rest could enter sequentially as they are downloaded and then get pushed to the sourceBuffer. Another question that I wasn't quite clear earlier was that in on demand video, the the web player can use its adaptive streaming ability to calculate the latency and user preferences in quality and such, but when it comes to <u>Live-stream</u> how does it request the segment when its ready to be requested? So What I understood is the transport protocol plays a huge role here.This is were the concept of **Manifest** comes in. It consist of all the information from the segments available for live stream, the video/audio quality available, the url of the server its available etc. 
+
+### What I have learnt from researching about the task at hand?
+
+The initial findings were not good so is now too perhaps. But I have found some hints on the way. Apart from what I have understood, stated above I found that the manifest url might be downloaded and be embedded to the HTML file, or somehow it could be accessed the same way the web player tries to access it. Im working on those two options.
+
+### What my next course of action would be?
+
+Definitely I want to download and parse the manifest file because that contains all the information about the behaviours and abr parameters of the either the live-streaming or video-on-demand videos files. So currently I am reading through the papers and trying out different tools and such
+
+### What all methods have I tried till now?
+
+Honestly I have tried out few tools, like the initial most promising was the extract-youtube-mpd but, the code was deprecated and the idea of using the "dashmpd" key to get the manifest didn't work. But I am still trying the method out in a different way, still using the html file of player in mind. Then the youtube-dl, this has a lot of promise because this has not given me the manifest file as such, but just the metadata, only few though. Next was the YoutubeExplode this code is very code as it explains a lot on how they approached the idea, but this might take a bit of time to get an idea of what they have done. 
