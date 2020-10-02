@@ -4,7 +4,8 @@ a.out
 JS/assignment/Q7/
 Java/**/*.class
 .frama-c/
-**/__pycache__**/
+**/__pycache__/**
 *.out
 *.o
 *.class
+**/classes/**
