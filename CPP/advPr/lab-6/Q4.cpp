@@ -15,37 +15,37 @@ int main(){
     Months.insert(make_pair(1, map<string, int>())); 
     Months[1].insert(make_pair("January", 31));
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(2, map<string, int>())); 
     Months[2].insert(make_pair("February", 28)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(3, map<string, int>())); 
     Months[3].insert(make_pair("March", 31)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(4, map<string, int>())); 
     Months[4].insert(make_pair("April", 30)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(5, map<string, int>())); 
     Months[5].insert(make_pair("May", 31)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(6, map<string, int>())); 
     Months[6].insert(make_pair("June", 30)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(7, map<string, int>())); 
     Months[7].insert(make_pair("July", 31)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(8, map<string, int>())); 
     Months[8].insert(make_pair("August", 31)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(9, map<string, int>())); 
     Months[9].insert(make_pair("September", 30)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(10, map<string, int>())); 
     Months[10].insert(make_pair("October", 31)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(11, map<string, int>())); 
     Months[11].insert(make_pair("November", 30)); 
 
-    Months.insert(make_pair(1, map<string, int>())); 
+    Months.insert(make_pair(12, map<string, int>())); 
     Months[12].insert(make_pair("December", 31)); 
 
 

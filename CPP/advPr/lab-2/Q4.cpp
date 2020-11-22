@@ -9,7 +9,7 @@ int searchNonrepeatChar(string str)
     int n = str.length();
     for (int i = 0; i < n; i++)
         freq[str.at(i)]++;
-    for (int i =0; i<n; i++)
+    for (int i = 0; i < n; i++)
     {
         char ch = str.at(i);
         if (freq[ch] == 1)
@@ -22,7 +22,7 @@ int searchNonrepeatChar(string str)
 int main()
 {
     string str;
-    cout<<"enter the string"<<endl;
-    cin>>str;
-    cout  << searchNonrepeatChar(str);
+    cout << "enter the string" << endl;
+    cin >> str;
+    cout << searchNonrepeatChar(str);
 }

@@ -1,26 +1,27 @@
-#include<iostream>
-
+// CPP program to demonstrate the
+// set::lower_bound() function
+#include <bits/stdc++.h>
+using namespace std;
 int main()
 {
-    
 
-    int a=0,b=0,t=0,res=0;
+	vector<int> s;
 
-    std::cin>>t;
+	// Function to insert elements
+	// in the set container
+	
+	s.push_back(1);
+    s.push_back(2);
+    s.push_back(3);
+    s.push_back(3);
+    s.push_back(5);
+    s.push_back(6);
 
-    for(int z=1;z<=t;z++)
-    {   
-        std::cin>>a>>b;
+    auto itr = lower_bound(s.begin(), s.end(), 4);
+    cout<< *itr<<endl;
+	cout << "The set elements are: ";
+	for (auto it = s.begin(); it != s.end(); it++)
+		cout << *it << " ";
 
-        
-        res = abs(a-b);
-        if(res%10==0)res = res/10;
-        else res = res/10 +1;
-
-
-        std::cout<<res<<std::endl;
-        
-    }
-
-    return 0;
+	return 0;
 }

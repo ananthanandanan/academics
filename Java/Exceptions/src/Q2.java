@@ -18,7 +18,7 @@ public class Q2 {
             try {
                 System.out.println("Enter the input");
                 item = in.nextLine();
-                
+
                 a[i] = Integer.parseInt(item);
 
             } catch (NumberFormatException e) {

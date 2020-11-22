@@ -25,6 +25,9 @@ int main(){
     cout<<"enter  the position to delete from"<<arr.size()<<endl;
     cin>>erase_q;
     arr.erase(arr.begin() + erase_q);
+    for(itr = arr.begin(); itr<arr.end();itr++){
+        cout<<*itr<<" ";
+    }
     int e1,e2;
     cout<<"enter  the position to delete from"<<arr.size()<<endl;
     cin>>e1>>e2;
