@@ -23,4 +23,5 @@ int main()
     }
     if(count==0)std::cout<<"EASY"<<std::endl;
     return 0;
+
 }
