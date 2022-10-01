@@ -12,6 +12,7 @@ def levenshteinDistance(s1, s2):
         current_row = [i + 1]
         for j, c2 in enumerate(s2):
             # print("S2",j,c2)
+            # https://medium.com/@ethannam/understanding-the-levenshtein-distance-equation-for-beginners-c4285a5604f0
             insertions = previous_row[j + 1] + 1 # j+1 instead of j since previous_row and current_row are one character longer
             deletions = current_row[j] + 1       # than s2
             substitutions = previous_row[j] + (c1 != c2) # if c1 == c2 else 1

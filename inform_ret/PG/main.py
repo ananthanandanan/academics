@@ -1,5 +1,5 @@
-from graph import Graph, Node
-from page_rank import pagerank
+from PG.graph import Graph, Node
+from PG.page_rank import pagerank
 
 a = Node()
 b = Node()

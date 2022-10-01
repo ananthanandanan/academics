@@ -1,6 +1,6 @@
 
 def pagerank(graph):
-
+    """ Return a dictionary of nodes and their page rank values. """
     n = len(graph.nodes)
     initial_val = 1.0/n
     ranks = dict(zip(graph.get_nodes(), [initial_val] * n))
@@ -21,4 +21,3 @@ def pagerank(graph):
     ranks = new_rank
 
     return ranks
-
